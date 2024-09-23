@@ -42,19 +42,19 @@ protected:
 
 public:
     explicit IO(DeviceHandle *handle, QObject *parent = nullptr);
-    virtual ~IO();
+    virtual ~IO() override;
 
     DeviceHandle * getDeviceHandle();
-    virtual bool open(QIODevice::OpenMode openMode);
-    virtual void close();
-    bool isSequential() const;
-    qint64 bytesToWrite() const;
-    qint64 bytesAvailable() const;
+    virtual bool open(QIODevice::OpenMode openMode) override;
+    virtual void close() override;
+    bool isSequential() const override;
+    qint64 bytesToWrite() const override;
+    qint64 bytesAvailable() const override;
 
     // QIODevice interface
 protected:
-    qint64 readData(char *data, qint64 maxlen);
-    qint64 writeData(const char *data, qint64 len);
+    qint64 readData(char *data, qint64 maxlen) override;
+    qint64 writeData(const char *data, qint64 len) override;
 
 };
 

@@ -43,7 +43,7 @@ public slots:
     void handle();
 
 protected:
-    virtual void timerEvent(QTimerEvent *);
+    virtual void timerEvent(QTimerEvent *) override;
 
 private:
 
@@ -58,7 +58,7 @@ class Destroyer : public QObject
 public:
     Destroyer(QThread *thread, EventHandler *handler, QObject *parent = nullptr);
 
-    ~Destroyer();
+    ~Destroyer() override;
 };
 
 }   // namespace QUSB

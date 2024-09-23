@@ -61,7 +61,7 @@ public:
     Device(const Device &d, QObject *parent = nullptr);
     explicit Device(libusb_device *rawdevice, QObject *parent = nullptr);
 
-    ~Device();
+    ~Device() override;
 
     libusb_device *rawdevice() const;
     static libusb_context *rawcontext();

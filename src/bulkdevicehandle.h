@@ -28,7 +28,7 @@ public:
     explicit BulkDeviceHandle(const Device &device,QObject *parent = nullptr);
 
 
-    ~BulkDeviceHandle();
+    ~BulkDeviceHandle() override;
     Device * getDevice();
 
     int activeConfiguration() const;

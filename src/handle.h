@@ -47,7 +47,7 @@ public:
 
 
     explicit DeviceHandle(const Device &device, QObject *parent = nullptr);
-    ~DeviceHandle();
+    ~DeviceHandle() override;
     Device * getDevice();
 
     int activeConfiguration() const;
