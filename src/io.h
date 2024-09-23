@@ -38,10 +38,10 @@ class QUSB_SHARED_EXPORT IO : public QIODevice
 
 protected:
     IOPrivate *d_ptr;
-    IO(IOPrivate *d, QObject *parent = 0);
+    IO(IOPrivate *d, QObject *parent = nullptr);
 
 public:
-    explicit IO(DeviceHandle *handle, QObject *parent = 0);
+    explicit IO(DeviceHandle *handle, QObject *parent = nullptr);
     virtual ~IO();
 
     DeviceHandle * getDeviceHandle();

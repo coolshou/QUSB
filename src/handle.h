@@ -41,12 +41,12 @@ class QUSB_SHARED_EXPORT DeviceHandle : public QObject
 
     DeviceHandle(
         const Device &device, libusb_device_handle *rawhandle,
-        QObject *parent = 0
+        QObject *parent = nullptr
     );
 public:
 
 
-    explicit DeviceHandle(const Device &device, QObject *parent = 0);
+    explicit DeviceHandle(const Device &device, QObject *parent = nullptr);
     ~DeviceHandle();
     Device * getDevice();
 

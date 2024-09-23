@@ -21,11 +21,11 @@ class QUSB_SHARED_EXPORT BulkDeviceHandle : public QIODevice
 
     BulkDeviceHandle(
         const Device &device, libusb_device_handle *rawhandle,
-        QObject *parent = 0
+        QObject *parent = nullptr
     );
 
 public:
-    explicit BulkDeviceHandle(const Device &device,QObject *parent = 0);
+    explicit BulkDeviceHandle(const Device &device,QObject *parent = nullptr);
 
 
     ~BulkDeviceHandle();

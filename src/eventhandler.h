@@ -34,7 +34,7 @@ class EventHandler : public QObject
     Q_OBJECT
 
 public:
-    EventHandler(libusb_context *context, QObject *parent = 0);
+    EventHandler(libusb_context *context, QObject *parent = nullptr);
 
     int timer;
     libusb_context *context;
@@ -56,7 +56,7 @@ class Destroyer : public QObject
     EventHandler *handler;
 
 public:
-    Destroyer(QThread *thread, EventHandler *handler, QObject *parent = 0);
+    Destroyer(QThread *thread, EventHandler *handler, QObject *parent = nullptr);
 
     ~Destroyer();
 };

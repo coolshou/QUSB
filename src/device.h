@@ -57,8 +57,8 @@ public:
 //    friend class DeviceHandle;
 //    friend void setDebugLevel(int level);
 
-    Device(const Device &d, QObject *parent = 0);
-    explicit Device(libusb_device *rawdevice, QObject *parent = 0);
+    Device(const Device &d, QObject *parent = nullptr);
+    explicit Device(libusb_device *rawdevice, QObject *parent = nullptr);
 
     ~Device();
 
