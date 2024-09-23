@@ -161,8 +161,9 @@ qint32 Device::vendorId() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.idVendor;
 }
 
@@ -170,8 +171,9 @@ qint32 Device::productId() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.idProduct;
 }
 
@@ -179,8 +181,9 @@ qint16 Device::product() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.iProduct;
 }
 
@@ -188,8 +191,9 @@ qint16 Device::manufacturer() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.iManufacturer;
 }
 
@@ -197,8 +201,9 @@ qint16 Device::serialNumber() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.iSerialNumber;
 }
 
@@ -206,8 +211,9 @@ qint16 Device::deviceClass() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.bDeviceClass;
 }
 
@@ -215,9 +221,21 @@ qint16 Device::deviceSubClass() const
 {
     libusb_device_descriptor desc;
     int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
-    if (r)
+    if (r){
         return -1;
+    }
     return desc.bDeviceSubClass;
+}
+
+qint16 Device::deviceProtocal() const
+{
+    libusb_device_descriptor desc;
+    int r = libusb_get_device_descriptor(d_ptr->rawdevice, &desc);
+    if (r){
+        return -1;
+    }
+    return desc.bDeviceProtocol;
+
 }
 
 void Device::DeviceDescription()

@@ -78,6 +78,7 @@ public:
     qint16 serialNumber() const;    // A quint8, or -1
     qint16 deviceClass() const;
     qint16 deviceSubClass() const;
+    qint16 deviceProtocal() const;
 
     void DeviceDescription();
     Device &operator=(const Device &d);
