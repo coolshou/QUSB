@@ -51,7 +51,8 @@ public:
         SpeedLow,
         SpeedFull,
         SpeedHigh,
-        SpeedSuper
+        SpeedSuper,
+        SpeedSuperPlus
     };
 
 //    friend class DeviceHandle;

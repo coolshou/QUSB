@@ -129,13 +129,16 @@ Device::Speed Device::speed() const
         sp = SpeedLow;
         break;
     case LIBUSB_SPEED_FULL:
-        sp = SpeedLow;
+        sp = SpeedLow; // TODO: LIBUSB_SPEED_FULL
         break;
     case LIBUSB_SPEED_HIGH:
-        sp = SpeedLow;
+        sp = SpeedLow; // TODO: LIBUSB_SPEED_HIGH
         break;
     case LIBUSB_SPEED_SUPER:
-        sp = SpeedLow;
+        sp = SpeedLow; // TODO: LIBUSB_SPEED_SUPER
+        break;
+    case LIBUSB_SPEED_SUPER_PLUS:
+        sp = SpeedLow; // TODO: LIBUSB_SPEED_SUPER_PLUS
         break;
     default:
         break;
