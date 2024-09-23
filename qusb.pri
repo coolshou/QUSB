@@ -1,3 +1,4 @@
+INCLUDEPATH += $$PWD/src
 
 #libusb-1.0
 win32 {
